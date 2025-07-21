@@ -2696,3 +2696,363 @@ a:focus {
     border: 1px solid #e5e7eb;
   }
 }
+
+/*////////////////////////////////////////////////////////////ABOUT-PAGE CSS//////////////////////////////////////////////////////////////////////////////////////////*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Banner */
+.banner {
+  background: url('../img/hero_img.jpeg') center center / cover no-repeat;
+  height: 400px;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.banner::before {
+  content: "";
+  background-color: rgba(101, 101, 220, 0.5); /* purple overlay */
+  position: absolute;
+  inset: 0;
+}
+
+.banner-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.banner-content p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.banner-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+/* About Section */
+.about-section {
+  padding: 80px 20px 20px;
+  margin: 0px 0px 50px;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-images {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
+
+.img-main {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Text Content */
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.subheading {
+  
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #3b82f6;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+
+/* Mission Cards */
+ /* Mission Section */
+ .mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.mission-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.mission-card h3 {
+  color: #1e3a8a;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.mission-card i {
+  font-size: 30px;
+  color: #2563eb;
+  margin-bottom: 1rem;
+} 
+.mission-card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Timeline */
+
+.container h2{
+  font-size: 40px;
+  padding: 40px;
+  text-align: center;
+}
+
+
+.history {
+  background-color:  rgb(249, 250, 251);
+  padding: 4rem 0;
+  margin: 4rem 0;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #3b82f6;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: 50%;
+  padding-right: 2rem;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 50%;
+  padding-left: 2rem;
+}
+
+.timeline-content {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.timeline-year {
+  font-weight: bold;
+  color: #1e3a8a;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  width: 12px;
+  height: 12px;
+  background: #000000;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px #3b82f6;
+}
+/* Leadership Section */
+.section-title {
+text-align: center;
+}
+.section-title p {
+color: #333;
+padding-bottom: 25px;
+}
+.section-title h2{
+  font-size: 40px;
+  padding: 40px;
+  text-align: center;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 50px;
+}
+
+.leader-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+ 
+}
+
+.leader-card:hover {
+  transform: translateY(-5px);
+}
+
+.leader-image {
+  width: 100%;
+  height: 250px;
+  /*background: linear-gradient(45deg, #e5e7eb, #d1d5db);*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: #9ca3af;
+}
+
+.leader-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #1f2937;
+  text-align: center;
+}
+
+.leader-role {
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.leader-class {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.leader-bio {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+/*---------------------------FAQ --------------------*/ 
+.faq-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgb(249, 250, 251);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(191, 95, 95, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.faq {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.faq:last-child {
+  border-bottom: none;
+}
+
+.question {
+  position: relative;
+  font-weight: 600;
+  font-size: 18px;
+  color: #444;
+}
+
+.question::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.faq.active .question::after {
+  content: "-";
+}
+
+.answer {
+  display: none;
+  margin-top: 10px;
+  color: #555;
+  font-size: 16px;
+}
+
+.faq.active .answer {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .faq-container {
+    padding: 20px;
+  }
+
+  .question {
+    font-size: 16px;
+  }
+
+  .answer {
+    font-size: 15px;
+  }
+}
