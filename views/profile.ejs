@@ -1,0 +1,367 @@
+<%- include("partials/header.ejs") %>
+
+    <main class="profile-main">
+      <div class="container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+          <div class="profile-cover"></div>
+          <div class="profile-info">
+            <div class="profile-avatar">
+              <img
+                src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="Profile Picture"
+              />
+              <button class="avatar-edit">
+                <i class="fas fa-camera"></i>
+              </button>
+            </div>
+
+            <div class="profile-details">
+              <h1>Adebayo Johnson</h1>
+              <p class="job-title">Senior Software Engineer at Interswitch</p>
+              <div class="profile-meta">
+                <div class="meta-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Lagos, Nigeria</span>
+                </div>
+                <div class="meta-item">
+                  <i class="fas fa-calendar"></i>
+                  <span>Class of 2018</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn-edit-profile" onclick="toggleEditMode()">
+              <i class="fas fa-edit"></i>
+              Edit Profile
+            </button>
+          </div>
+        </div>
+
+        <!-- Edit Mode Alert -->
+        <div class="edit-alert" id="editAlert" style="display: none">
+          <div class="alert-content">
+            <p>
+              You are now editing your profile. Don't forget to save your
+              changes!
+            </p>
+            <div class="alert-actions">
+              <button class="btn-save" onclick="saveProfile()">
+                <i class="fas fa-save"></i>
+                Save
+              </button>
+              <button class="btn-cancel" onclick="cancelEdit()">
+                <i class="fas fa-times"></i>
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-content">
+          <!-- Main Content -->
+          <div class="profile-main-content">
+            <!-- Personal Information -->
+            <div class="profile-section">
+              <h2><i class="fas fa-user"></i> Personal Information</h2>
+
+              <div class="info-grid">
+                <div class="info-item">
+                  <label>First Name</label>
+                  <div class="info-value">
+                    <span class="display-value">Adebayo</span>
+                    <input
+                      type="text"
+                      class="edit-input"
+                      value="Adebayo"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <label>Last Name</label>
+                  <div class="info-value">
+                    <span class="display-value">Johnson</span>
+                    <input
+                      type="text"
+                      class="edit-input"
+                      value="Johnson"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <label>Email</label>
+                  <div class="info-value">
+                    <span class="display-value"
+                      >adebayo.johnson@example.com</span
+                    >
+                    <input
+                      type="email"
+                      class="edit-input"
+                      value="adebayo.johnson@example.com"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <label>Phone</label>
+                  <div class="info-value">
+                    <span class="display-value">+234 803 123 4567</span>
+                    <input
+                      type="tel"
+                      class="edit-input"
+                      value="+234 803 123 4567"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <label>Location</label>
+                  <div class="info-value">
+                    <span class="display-value">Lagos, Nigeria</span>
+                    <input
+                      type="text"
+                      class="edit-input"
+                      value="Lagos, Nigeria"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Academic Information -->
+            <div class="profile-section">
+              <h2>
+                <i class="fas fa-graduation-cap"></i> Academic Information
+              </h2>
+
+              <div class="info-grid">
+                <div class="info-item">
+                  <label>Graduation Year</label>
+                  <div class="info-value">
+                    <span class="display-value">2018</span>
+                    <select class="edit-input" style="display: none">
+                      <option value="2018" selected>2018</option>
+                      <option value="2017">2017</option>
+                      <option value="2016">2016</option>
+                      <option value="2015">2015</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <label>Degree</label>
+                  <div class="info-value">
+                    <span class="display-value">Bachelor of Science</span>
+                    <input
+                      type="text"
+                      class="edit-input"
+                      value="Bachelor of Science"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+
+                <div class="info-item full-width">
+                  <label>Major/Field of Study</label>
+                  <div class="info-value">
+                    <span class="display-value">Computer Science</span>
+                    <input
+                      type="text"
+                      class="edit-input"
+                      value="Computer Science"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Professional Information -->
+            <div class="profile-section">
+              <h2><i class="fas fa-briefcase"></i> Professional Information</h2>
+
+              <div class="info-grid">
+                <div class="info-item">
+                  <label>Job Title</label>
+                  <div class="info-value">
+                    <span class="display-value">Senior Software Engineer</span>
+                    <input
+                      type="text"
+                      class="edit-input"
+                      value="Senior Software Engineer"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <label>Company</label>
+                  <div class="info-value">
+                    <span class="display-value">Interswitch</span>
+                    <input
+                      type="text"
+                      class="edit-input"
+                      value="Interswitch"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+
+                <div class="info-item full-width">
+                  <label>Industry</label>
+                  <div class="info-value">
+                    <span class="display-value">Technology</span>
+                    <input
+                      type="text"
+                      class="edit-input"
+                      value="Technology"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bio -->
+            <div class="profile-section">
+              <h2>Bio</h2>
+              <div class="bio-content">
+                <div class="info-value">
+                  <p class="display-value">
+                    Passionate software engineer with 6+ years of experience in
+                    full-stack development. Specialized in React, Node.js, and
+                    cloud technologies. Love mentoring new graduates and
+                    contributing to open-source projects.
+                  </p>
+                  <textarea class="edit-input" rows="4" style="display: none">Passionate software engineer with 6+ years of experience in full-stack development. Specialized in React, Node.js, and cloud technologies. Love mentoring new graduates and contributing to open-source projects.</textarea
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="profile-sidebar">
+            <!-- Contact & Links -->
+            <div class="profile-section">
+              <h2>Contact & Links</h2>
+              <div class="links-list">
+                <div class="link-item">
+                  <label>LinkedIn</label>
+                  <div class="info-value">
+                    <a
+                      href="https://linkedin.com/in/adebayojohnson"
+                      target="_blank"
+                      class="display-value"
+                      >linkedin.com/in/adebayojohnson</a
+                    >
+                    <input
+                      type="url"
+                      class="edit-input"
+                      value="https://linkedin.com/in/adebayojohnson"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+
+                <div class="link-item">
+                  <label>GitHub</label>
+                  <div class="info-value">
+                    <a
+                      href="https://github.com/adebayojohnson"
+                      target="_blank"
+                      class="display-value"
+                      >github.com/adebayojohnson</a
+                    >
+                    <input
+                      type="url"
+                      class="edit-input"
+                      value="https://github.com/adebayojohnson"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+
+                <div class="link-item">
+                  <label>Website</label>
+                  <div class="info-value">
+                    <a
+                      href="https://adebayojohnson.dev"
+                      target="_blank"
+                      class="display-value"
+                      >adebayojohnson.dev</a
+                    >
+                    <input
+                      type="url"
+                      class="edit-input"
+                      value="https://adebayojohnson.dev"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="profile-section">
+              <h2>Skills</h2>
+              <div class="skills-content">
+                <div class="info-value">
+                  <div class="skills-tags display-value">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes</span>
+                  </div>
+                  <textarea
+                    class="edit-input"
+                    rows="3"
+                    placeholder="List your skills, separated by commas"
+                    style="display: none"
+                  >JavaScript, Python, React, Node.js, AWS, Docker, Kubernetes</textarea
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Interests -->
+            <div class="profile-section">
+              <h2>Interests</h2>
+              <div class="interests-content">
+                <div class="info-value">
+                  <div class="interests-tags display-value">
+                    <span class="interest-tag">Machine Learning</span>
+                    <span class="interest-tag">Web Development</span>
+                    <span class="interest-tag">Mentoring</span>
+                    <span class="interest-tag">Open Source</span>
+                  </div>
+                  <textarea
+                    class="edit-input"
+                    rows="3"
+                    placeholder="List your interests, separated by commas"
+                    style="display: none"
+                  >Machine Learning, Web Development, Mentoring, Open Source</textarea
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
