@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oduduwa University Alumni Portal - Connect, Grow, Succeed</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="/" class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Oduduwa University Alumni</span>
+          </a>
+
+          <nav class="nav-desktop">
+            <a href="/" class="nav-link <%= locals.title === 'home' ? 'active' : '' %>">Home</a>
+            <a href="/directory" class="nav-link <%= locals.title === 'directory' ? 'active' : '' %>">Directory</a>
+            <a href="/events" class="nav-link <%= locals.title === 'events' ? 'active' : '' %>">Events</a>
+            <a href="/transcript" class="nav-link <%= locals.title === 'transcript' ? 'active' : '' %>">Transcripts</a>
+            <div class="nav-buttons">
+              <a href="/login" class="btn-secondary">Login</a>
+              <a href="/register" class="btn-primary">Register</a>
+            </div>
+          </nav>
+
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <nav class="nav-mobile" id="mobileNav">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/directory" class="nav-link">Directory</a>
+          <a href="/events" class="nav-link">Events</a>
+          <a href="/transcript" class="nav-link">Transcripts</a>
+          <div class="nav-buttons-mobile">
+            <a href="/login" class="btn-secondary">Login</a>
+            <a href="/register" class="btn-primary">Register</a>
+          </div>
+        </nav>
+      </div>
+    </header>
