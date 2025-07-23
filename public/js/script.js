@@ -1,16 +1,38 @@
 // // Mobile Menu Toggle
-// function toggleMobileMenu() {
-//   const mobileNav = document.getElementById("mobileNav");
-//   const menuBtn = document.querySelector(".mobile-menu-btn i");
+function toggleMobileMenu() {
+  const mobileNav = document.getElementById("mobileNav");
+  const menuBtn = document.querySelector(".mobile-menu-btn i");
 
-//   if (mobileNav.style.display === "block") {
-//     mobileNav.style.display = "none";
-//     menuBtn.className = "fas fa-bars";
-//   } else {
-//     mobileNav.style.display = "block";
-//     menuBtn.className = "fas fa-times";
-//   }
-// }
+  if (mobileNav.style.display === "block") {
+    mobileNav.style.display = "none";
+    menuBtn.className = "fas fa-bars";
+  } else {
+    mobileNav.style.display = "block";
+    menuBtn.className = "fas fa-times";
+  }
+}
+
+function toggleMobileMenu() {
+    const navMenu = document.getElementById('menu_bar');
+    navMenu.classList.toggle('active');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const navMenu = document.getElementById('menu_bar');
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    
+    if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
+        navMenu.classList.remove('active');
+    }
+});
+
+// Close mobile menu when window is resized to desktop
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        document.getElementById('menu_bar').classList.remove('active');
+    }
+});
 
 // // Close mobile menu when clicking on a link
 // document.addEventListener("DOMContentLoaded", function () {
