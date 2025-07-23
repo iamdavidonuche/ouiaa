@@ -34,6 +34,7 @@ window.addEventListener('resize', function() {
     }
 });
 
+
 // // Password Toggle
 // function togglePassword(inputId) {
 //   const input = document.getElementById(inputId);
