@@ -1,29 +1,38 @@
 // // Mobile Menu Toggle
-// function toggleMobileMenu() {
-//   const mobileNav = document.getElementById("mobileNav");
-//   const menuBtn = document.querySelector(".mobile-menu-btn i");
+function toggleMobileMenu() {
+  const mobileNav = document.getElementById("mobileNav");
+  const menuBtn = document.querySelector(".mobile-menu-btn i");
 
-//   if (mobileNav.style.display === "block") {
-//     mobileNav.style.display = "none";
-//     menuBtn.className = "fas fa-bars";
-//   } else {
-//     mobileNav.style.display = "block";
-//     menuBtn.className = "fas fa-times";
-//   }
-// }
+  if (mobileNav.style.display === "block") {
+    mobileNav.style.display = "none";
+    menuBtn.className = "fas fa-bars";
+  } else {
+    mobileNav.style.display = "block";
+    menuBtn.className = "fas fa-times";
+  }
+}
 
-// // Close mobile menu when clicking on a link
-// document.addEventListener("DOMContentLoaded", function () {
-//   const mobileLinks = document.querySelectorAll(".nav-mobile .nav-link");
-//   mobileLinks.forEach((link) => {
-//     link.addEventListener("click", function () {
-//       const mobileNav = document.getElementById("mobileNav");
-//       const menuBtn = document.querySelector(".mobile-menu-btn i");
-//       mobileNav.style.display = "none";
-//       menuBtn.className = "fas fa-bars";
-//     });
-//   });
-// });
+function toggleMobileMenu() {
+    const navMenu = document.getElementById('menu_bar');
+    navMenu.classList.toggle('active');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const navMenu = document.getElementById('menu_bar');
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    
+    if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
+        navMenu.classList.remove('active');
+    }
+});
+
+// Close mobile menu when window is resized to desktop
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        document.getElementById('menu_bar').classList.remove('active');
+    }
+});
 
 // // Password Toggle
 // function togglePassword(inputId) {
@@ -80,23 +89,23 @@
 //   }, 1000);
 // }
 
-// function handleTranscriptRequest(event) {
-//   event.preventDefault();
-//   const formData = new FormData(event.target);
-//   const requestData = Object.fromEntries(formData);
+function handleTranscriptRequest(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const requestData = Object.fromEntries(formData);
 
-//   console.log("Transcript request:", requestData);
+  console.log("Transcript request:", requestData);
 
-//   // Simulate request processing
-//   setTimeout(() => {
-//     alert(
-//       "Transcript request submitted successfully! You will receive a confirmation email shortly."
-//     );
-//     // Reset form or redirect
-//     event.target.reset();
-//     updateTotal();
-//   }, 1000);
-// }
+  // Simulate request processing
+  setTimeout(() => {
+    alert(
+      "Transcript request submitted successfully! You will receive a confirmation email shortly."
+    );
+    // Reset form or redirect
+    event.target.reset();
+    updateTotal();
+  }, 1000);
+}
 
 // // Directory Filtering
 // function filterAlumni() {
