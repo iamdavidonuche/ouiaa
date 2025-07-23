@@ -34,18 +34,6 @@ window.addEventListener('resize', function() {
     }
 });
 
-// // Close mobile menu when clicking on a link
-// document.addEventListener("DOMContentLoaded", function () {
-//   const mobileLinks = document.querySelectorAll(".nav-mobile .nav-link");
-//   mobileLinks.forEach((link) => {
-//     link.addEventListener("click", function () {
-//       const mobileNav = document.getElementById("mobileNav");
-//       const menuBtn = document.querySelector(".mobile-menu-btn i");
-//       mobileNav.style.display = "none";
-//       menuBtn.className = "fas fa-bars";
-//     });
-//   });
-// });
 
 // // Password Toggle
 // function togglePassword(inputId) {
@@ -102,23 +90,23 @@ window.addEventListener('resize', function() {
 //   }, 1000);
 // }
 
-// function handleTranscriptRequest(event) {
-//   event.preventDefault();
-//   const formData = new FormData(event.target);
-//   const requestData = Object.fromEntries(formData);
+function handleTranscriptRequest(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const requestData = Object.fromEntries(formData);
 
-//   console.log("Transcript request:", requestData);
+  console.log("Transcript request:", requestData);
 
-//   // Simulate request processing
-//   setTimeout(() => {
-//     alert(
-//       "Transcript request submitted successfully! You will receive a confirmation email shortly."
-//     );
-//     // Reset form or redirect
-//     event.target.reset();
-//     updateTotal();
-//   }, 1000);
-// }
+  // Simulate request processing
+  setTimeout(() => {
+    alert(
+      "Transcript request submitted successfully! You will receive a confirmation email shortly."
+    );
+    // Reset form or redirect
+    event.target.reset();
+    updateTotal();
+  }, 1000);
+}
 
 // // Directory Filtering
 // function filterAlumni() {
