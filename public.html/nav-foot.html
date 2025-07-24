@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>General Navbar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <script src="../js/script.js"></script>
 
 
@@ -25,7 +25,7 @@
             </button>
 
             <!-- Navigation Menu -->
-            <ul class="nav-menu menu_bar">
+            <ul class="nav-menu " id="navMenu">
                 <li class="menu-item">
                     <a href="#" class="nav-link">Home</a>
                 </li>
@@ -33,7 +33,7 @@
                     <a href="#" class="nav-link">About</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Scholarship</a>
+                    <a href="#" class="nav-link dropdown-toggle" onclick="toggleDropdown(event)">Scholarship</a>
                     <div class="dropdown-menu">
                         <a href="#" class="dropdown-item">placeholder</a>
                         <a href="#" class="dropdown-item">placeholder </a>
@@ -118,7 +118,7 @@
                         </a>
                         <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i>
                         </a>
-                       
+         
                     </div>
             </div>
      </div>
