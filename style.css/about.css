@@ -17,7 +17,7 @@ background-color: #fff;
 /* Banner */
 .banner {
 height: 50vh;
-background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../img/banner-img.jpg');
+background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../imageb/banner-img.jpg');
 background-size: 100% 90%;
 background-position: center;
 background-attachment: fixed;
