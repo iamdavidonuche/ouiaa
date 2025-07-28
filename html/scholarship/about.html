@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/css/scholarship.css">
+   <link rel="stylesheet" href="/css/nav.css">
+   <script src="/script/script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="/img/OUIAA.png" alt="OUIAA Logo">
+                <span>OUIAA</span>
+            </a>
+    
+            <!-- Mobile Toggle Button -->
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+    
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="menu-item">
+                    <a href="../home.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" onclick="toggleDropdown(event)">Scholarship</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">About</a>
+                        <a href="./eligibility.html" class="dropdown-item">Eligibility </a>
+                        <a href="./Specification.html" class="dropdown-item">Person Specification</a>
+                        <a href="./selection.html" class="dropdown-item">Selection Criteria</a>
+                        <a href="./apply.html" class="dropdown-item">Apply</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">OUIAA SCHOLARSHIP PROGRAMME</h1>
+                <p class="page-subtitle">
+                    Empowering the next generation through education and opportunity
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">About the Alumni Scholarship Fund</h2>
+                <div class="section-content">
+                    <p>
+                        The OUIAA Scholarship Programme is a merit-based initiative designed to empower undergraduates at Oduduwa University who show outstanding academic promise, resilience, and a desire to positively influence their communities. Education is not just a personal journey
+                         — it is a pathway to transforming society. Through this scholarship, we are seeking to identify students who have not only achieved academic excellence but who have also shown character, leadership, and commitment in the face of personal or financial hardship. This scholarship covers partial or full tuition fees for the academic year and is funded by generous sponsors who believe in the power of young minds to shape a better future. 
+                        </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 OUIAA. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,345 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+.main-content {
+    margin-top: 80px;
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: #2c5aa0;
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+     margin: 0 auto;
+     margin-bottom: 3rem;
+    text-align: center;
+    max-width: 800px;
+}
+
+.content-section {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #2c5aa0;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #2c5aa0;
+    padding-bottom: 10px;
+}
+
+.section-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.section-content p {
+    margin-bottom: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+  
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    
+}
+/*======================Eligibility Page============================*/
+    .eligibility-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #2c5aa0;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #2c5aa0;
+            padding-bottom: 15px;
+        }
+
+       
+
+        .requirement-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #2c5aa0;
+        }
+
+        .requirement-title {
+            font-size: 1.3rem;
+            color: #2c5aa0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+
+        .requirement-details {
+            list-style: none;
+        }
+
+        .requirement-details li {
+            padding: 5px 0;
+            color: #666;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .requirement-details li:before {
+            content: "•";
+            color: #2c5aa0;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .requirements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .eligibility-section {
+                padding: 20px;
+            }
+        }
+
+ /*======================Specification Page============================*/
+
+.box{
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 4px solid #3498db;
+}
+
+.section-hero{
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.sectionContent {
+    color: #444;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.sectionContent p {
+    margin-bottom: 1.2rem;
+}
+
+.requirements-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.requirements-list li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.requirements-list li:before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.requirements-list li:last-child {
+    border-bottom: none;
+}
+
+.highlight-box {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-box strong {
+    color: #856404;
+}
+
+.warning-box {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.warning-box strong {
+    color: #721c24;
+}
+
+.cgpa-highlight {
+    background:linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.cgpa-highlight strong {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.word-limit {
+    background-color: #e8f4fd;
+    color: #2980b9;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.impact-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.impact-area {
+    background-color: #f8f9fa;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 3px solid #3498db;
+}
+
+.impact-area h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+.highlight-style{
+    margin-top: 1rem; 
+    padding-left: 1.5rem;
+}
+/*=============selection page css=========*/
+.info-box{
+    margin-top: 20px;
+
+}
+.criteria-list li{
+margin-bottom: 20px;
+}
+/*===============Apply css ==============================*/
+.click-me{
+ text-align: center;
+
+}
+
+.btn{
+ 
+    padding: 15px 30px;   
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    background: #6366f1;
+    color: white;
+}
+.btn:hover{
+    background: #5855eb;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .section {
+        padding: 1.5rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .header-content {
+        padding: 0 1rem;
+    }
+
+    .impact-areas {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*=======footer=========*/
+.footer-bottom{
+    background-color: whitesmoke;
+    padding: 30px;
+}
+.footer-bottom p{
+    text-align: center;
+}
