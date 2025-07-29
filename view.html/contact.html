@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - OUIAA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="..css/contact.css">
+    <script src="../publics/js/script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="../publics/img/OUIAA.png" alt="OUIAA Logo">
+                <span>OUIAA</span>
+            </a>
+
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="menu-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" onclick="toggleDropdown(event)">Scholarship</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">placeholder</a>
+                        <a href="#" class="dropdown-item">placeholder </a>
+                        <a href="#" class="dropdown-item">placeholder</a>
+                        <a href="#" class="dropdown-item">placeholder</a>
+                        <a href="#" class="dropdown-item">placeholder</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./contact.html" class="nav-link active">Contact</a>
+                </li>
+                
+                <li class="nav-item auth-buttons">
+                    <a href="#" class="btn btn-login">Log In</a>
+                    <a href="#" class="btn btn-signup">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="contact-hero" class="hero small-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Get in <span class="highlight">Touch</span>
+            </h1>
+            <p class="hero-description">
+                We'd love to hear from you! Reach out to the OUIAA team with your questions or feedback.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact-details" class="contact-details">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Our Details</h2>
+                    <p>Feel free to contact us through any of the following methods:</p>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ipetumodu, Osun State, Nigeria</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>OUIAA@university.edu</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+234 123 456 7890</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon - Fri: 9:00 AM - 5:00 PM (WAT)</span>
+                    </div>
+
+                    <h3>Follow Us</h3>
+                    <div class="social-links-contact">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Reconnect?</h2>
+                <p>Join thousands of alumni who are already building their future together.</p>
+                <a href="#" class="btn btn-primary btn-large">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-header">
+                <div class="footer-logo">
+                    <img src="../publics/img/OUIAA.png" alt="">
+                </div>
+                <div class="university-name">OUIAA</div>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="#">Scholarship</a></li>
+                        <li><a href="#">Transcript</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                   </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>OUIAA@university.edu</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <span>+234 123 456 7890</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>Ipetumodu, Osun State, Nigeria</span>
+                    </div>
+                </div>
+                <div class="social-icon">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter">𝕏</i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 OUIAA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

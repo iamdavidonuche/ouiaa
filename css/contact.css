@@ -1,0 +1,147 @@
+/* --- Contact Page Specific Styles --- */
+
+/* Styles for the smaller hero section on the contact page */
+.hero.small-hero {
+  padding: 80px 0; /* Adjust padding to make it shorter than main hero */
+  min-height: 250px; /* Example minimum height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Main container for contact details and form */
+.contact-details {
+  padding: 60px 0;
+  background-color: #f9f9f9; /* Light background for the section */
+}
+
+/* Grid layout for contact info and form */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Contact info on left (1 part), form on right (2 parts) */
+  gap: 40px; /* Space between the two columns */
+  align-items: start; /* Align items to the top of their grid cells */
+}
+
+/* Responsive adjustment for smaller screens: stack columns */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* Single column layout on screens up to 768px wide */
+  }
+}
+
+/* Styling for the contact information card */
+.contact-info {
+  background-color: #fff; /* White background */
+  padding: 30px;
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-info h2 {
+  color: #333; /* Dark text color for headings */
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: #6b7280; /* Slightly lighter text for paragraphs */
+  margin-bottom: 25px;
+}
+
+/* Styling for individual contact items (address, email, phone, hours) */
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.info-item i {
+  font-size: 1.2rem;
+  color: #1e40af; /* Primary blue color for icons */
+  margin-right: 15px;
+  width: 25px; /* Ensure consistent spacing for icons */
+  text-align: center;
+}
+
+/* Styling for the social media links within the contact info section */
+.social-links-contact {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px; /* Space between social icons */
+}
+
+.social-links-contact a {
+  font-size: 1.8rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.social-links-contact a:hover {
+  color: #1e40af; /* Change color on hover to primary blue */
+}
+
+/* Styling for the contact form container */
+.contact-form-container {
+  background-color: #fff; /* White background */
+  padding: 30px;
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-form h2 {
+  color: #333; /* Dark text color for headings */
+  margin-bottom: 25px;
+}
+
+/* Styling for each form group (label + input/textarea) */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block; /* Make label take full width */
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%; /* Full width for inputs and textarea */
+  padding: 12px;
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding in the element's total width/height */
+}
+
+/* Focus styles for form inputs */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #1e40af; /* Primary blue border on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.25); /* Subtle blue shadow on focus */
+}
+
+/* Styling for the submit button */
+.btn-submit {
+  display: block; /* Make button take full width */
+  width: 100%;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* Inherits colors from .btn-primary or similar if defined globally */
+}
+
+/* Style for the active navigation link (e.g., "Contact" link when on contact.html) */
+.nav-link.active {
+  color: #1e40af; /* Use your primary highlight color */
+  font-weight: bold;
+}
