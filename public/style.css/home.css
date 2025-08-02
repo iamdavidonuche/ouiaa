@@ -1,0 +1,506 @@
+
+          /* Hero Section with Image */
+          .hero {
+            height: 80vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                              url('../imageb/hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            padding: 0 10px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+
+        .highlight {
+            color:#1e40af;
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .btn {
+            padding: 15px 30px;
+           
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #6366f1;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5855eb;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #6366f1;
+        }
+
+       
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #64748b;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background:  linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: whitesmoke;
+            font-size: 2rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            margin-top: 5rem;
+        }
+
+        .about-text p {
+            color: #444;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .about-features {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+     /*   .checkmark {
+            width: 24px;
+            height: 24px;
+            background: #10b981;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }*/
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(218, 91, 91, 0.128);
+        }
+
+        /* CTA Section
+        .cta {
+            padding: 80px 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../imageb/reconnect.jpg');
+            color: #ffffff;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+            margin-bottom: 50px;
+        }
+
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff ;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-large {
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+ */
+
+       
+       /*---------------testimonial----------------------- */
+/* Testimonial Section */
+.testimonial {
+  padding: 90px 20px ;
+  background: #f8fafc;
+  margin-bottom: 5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile first */
+  gap: 1.5rem;
+}
+
+
+.testimonial-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+.alumni-title {
+  font-size: 0.9em;
+  color: #444;
+  margin: 0;
+  text-align: left;
+}
+
+
+.testimonial-text {
+  font-size: 1em;
+  color: #444444;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Responsive Grid at Larger Sizes */
+@media (min-width: 600px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+        
+      
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+          .hero-title {
+            font-size: 3rem;
+          }
+        
+          .hero-description {
+            font-size: 1.2rem;
+          }
+        
+          .section-header h2 {
+            font-size: 2.2rem;
+          }
+        
+          .about-content {
+            gap: 3rem;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .hero {
+            height: 70vh;
+            background-attachment: scroll;
+          }
+        
+          .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+          }
+        
+          .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+          }
+        
+          .btn {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+            margin: 0.5rem;
+          }
+        
+          .features {
+            padding: 60px 0;
+          }
+        
+          .features-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+          }
+        
+          .feature-card {
+            padding: 2rem;
+          }
+        
+          .feature-icon {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+          }
+        
+          .about {
+            padding: 60px 0;
+          }
+        
+          .about-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+            
+          }
+        
+          .about-text h2 {
+            font-size: 2rem;
+          }
+          .about-text p{
+            text-align: left;
+          }
+        
+          .about-image img {
+            height: 300px;
+          }
+        
+          .cta {
+            height: 40vh;
+            background-attachment: scroll;
+            padding: 40px 0;
+          }
+        
+          .cta-content h2 {
+            font-size: 2rem;
+          }
+        
+          .cta-content p {
+            font-size: 1.1rem;
+          }
+        
+          .section-header h2 {
+            font-size: 2rem;
+          }
+        
+          .section-header p {
+            font-size: 1rem;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .hero {
+            height: 60vh;
+            padding: 0 10px;
+          }
+        
+          .hero-title {
+            font-size: 2rem;
+            line-height: 1.3;
+          }
+        
+          .hero-description {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+          }
+        
+          .btn {
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            display: block;
+            margin: 0.5rem auto;
+            max-width: 200px;
+          }
+        
+          .features {
+            padding: 40px 0;
+          }
+        
+          .feature-card {
+            padding: 1.5rem;
+          }
+        
+          .feature-card h3 {
+            font-size: 1.3rem;
+          }
+        
+          .about {
+            padding: 40px 0;
+          }
+        
+          .about-text h2 {
+            font-size: 1.8rem;
+          }
+        
+          .about-text p {
+            font-size: 1rem;
+          }
+        
+          .cta {
+            height: 35vh;
+            padding: 30px 10px;
+          }
+        
+          .cta-content h2 {
+            font-size: 1.8rem;
+          }
+        
+          .cta-content p {
+            font-size: 1rem;
+          }
+        
+          .btn-large {
+            padding: 15px 30px;
+            font-size: 1rem;
+          }
+        
+          .section-header h2 {
+            font-size: 1.8rem;
+          }
+        
+          .container {
+            padding: 0 15px;
+          }
+        }
+        
+        @media (max-width: 360px) {
+          .hero-title {
+            font-size: 1.8rem;
+          }
+        
+          .hero-description {
+            font-size: 0.9rem;
+          }
+        
+          .feature-card {
+            padding: 1.2rem;
+          }
+        
+          .cta-content h2 {
+            font-size: 1.6rem;
+          }
+        }
+        
