@@ -1,0 +1,44 @@
+<!--===============Navigation===============-->
+<nav class="navbar">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <img src="/imageb/OUIAA.png" alt="OUIAA Logo">
+            <span>OUIAA</span>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-toggle" onclick="toggleMobileMenu()">
+            ☰
+        </button>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+            <li class="menu-item">
+                <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="/about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" onclick="toggleDropdown(event)">Scholarship</a>
+                <div class="dropdown-menu">
+                    <a href="/about-scholarship" class="dropdown-item">About</a>
+                    <a href="/eligibility" class="dropdown-item">Eligibility </a>
+                    <a href="/specification" class="dropdown-item">Person Specification</a>
+                    <a href="/selection" class="dropdown-item">Selection Criteria</a>
+                    <a href="/scholarship" class="dropdown-item">Apply</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                    <a href="/leadership" class="nav-link">Leadership</a>
+            </li>
+            <li class="nav-item">
+                <a href="/transcript" class="nav-link">Transcript</a>
+            </li>
+            <li class="nav-item">
+                <a href="/contact" class="nav-link">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>

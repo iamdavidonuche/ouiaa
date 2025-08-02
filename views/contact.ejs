@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Oduduwa University Alumni</title>
+    <link rel="stylesheet" href="../style.css/contact.css">
+  <link rel="stylesheet" href="style.css/nav.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <!--===============Navigation===============-->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="/imageb/OUIAA.png" alt="OUIAA Logo">
+                <span>OUIAA</span>
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="menu-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" onclick="toggleDropdown(event)">Scholarship</a>
+                    <div class="dropdown-menu">
+                        <a href="/about-scholarship" class="dropdown-item">About</a>
+                        <a href="/eligibility" class="dropdown-item">Eligibility </a>
+                        <a href="/specification" class="dropdown-item">Person Specification</a>
+                        <a href="/selection" class="dropdown-item">Selection Criteria</a>
+                        <a href="/scholarship" class="dropdown-item">Apply</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="/leadership" class="nav-link">Leadership</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/transcript" class="nav-link">Transcript</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="page-container">
+      <header class="header">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you!</p>
+      </header>
+
+      <section class="contact-form-section">
+        <div class="contact-container">
+          <div class="contact-form-wrapper">
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required />
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+                <div class="invalid-feedback"></div>
+              </div>
+              <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+          </div>
+
+          <div class="contact-details">
+            <h2>Get in Touch</h2>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Oduduwa University,
+              Ipetumodu, Osun State
+            </p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+2348065260738">+234(0)80 6526 0738</a></p>
+            <p><i class="fas fa-envelope"></i><a href="mailto:ouiaaglobal@gmail.com" target="_blank">ouiaaglobal@gmail.com</a></p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/ouiaaworldwide/" class="social-link facebook" aria-label="Facebook"
+                ><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/oduduwa-university-alumni-association/posts/?feedView=all" class="social-link linkedin" target="_blank" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://wa.me/2348065260738" target="_blank" class="social-link linkedin" aria-label="LinkedIn"
+                ><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; 2025 OUIAA. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script>
+          function toggleMobileMenu() {
+          const navMenu = document.getElementById('navMenu');
+          navMenu.classList.toggle('active');
+          }
+
+          // Close mobile menu when clicking outside
+          document.addEventListener('click', function(event) {
+              const navMenu = document.getElementById('navMenu');
+              const mobileToggle = document.querySelector('.mobile-toggle');
+              
+              if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
+                  navMenu.classList.remove('active');
+              }
+          });
+
+          // Close mobile menu when window is resized to desktop
+          window.addEventListener('resize', function() {
+              if (window.innerWidth > 768) {
+                  document.getElementById('navMenu').classList.remove('active');
+              }
+          });
+
+            function toggleDropdown(event) {
+              event.preventDefault(); 
+              const parent = event.target.closest('.dropdown');
+              const menu = parent.querySelector('.dropdown-menu');
+              menu.classList.toggle('show');
+            }
+            
+
+
+    </script>
+  </body>
+</html>

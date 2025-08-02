@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/imageb/favicon.png" sizes="200x200" type="image/x-icon">
+    <title>OUIAA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css/home.css">
+    <link rel="stylesheet" href="style.css/nav.css">
+    <link rel="stylesheet" href="style.css/footer.css">
+    <script src="script.js/script.js"></script>
+</head>
+<body>
+        <!-- Hero Section with Image -->
+        <%- include("partials/nav.ejs") %>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                   Oduduwa University Ipetumodu <span class="highlight">Alumni Asociation </span>
+                </h1>
+                <p class="hero-description">
+                    Join thousands of graduates building meaningful connections, advancing careers, 
+                    and creating lasting impact in their communities.
+                </p>
+            </div>
+        </section>
+    
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose OUIAA?</h2>
+                    <p>Discover the tools and opportunities that make our platform unique</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-users"></i>
+                        </div>
+                        <h3>Professional Network</h3>
+                        <p>Connect with alumni across industries and expand your professional circle with meaningful relationships.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Career Opportunities</h3>
+                        <p>Access exclusive job postings, mentorship programs, and career advancement resources.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-calendar"></i>
+                        </div>
+                        <h3>Events & Reunions</h3>
+                        <p>Stay updated on alumni events, reunions, and networking opportunities in your area.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-star"></i>
+                        </div>
+                        <h3>Achievement Recognition</h3>
+                        <p>Celebrate successes and milestones with your alumni community and get recognized for your achievements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- === About Section === -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Message from the President</h2>
+                       
+                        <p>
+                            Dear Alumni Family,
+                            <br>
+                            <br>
+                            It’s an honour to lead a community of resilient, brilliant, and inspiring individuals who continue to carry the light of Oduduwa University across the globe. Since our founding in 2017, the Association has grown in strength and purpose. Today, we stand as a movement, united by a passion to give back, grow together, and create opportunities for others.
+                            <br>
+                            <br>
+                            This is your home. This is your community. Let’s keep building it together.
+                        </p>
+                        <div class="about-features">
+                            <div class="about-feature">
+                                <!-- <span class="checkmark">✓</span> -->
+                                <span>Warm regards,</span>
+                            </div>
+                            <div class="about-feature">
+                                <span>Marvelous Ayodele</span>
+                            </div>
+                            <div class="about-feature">
+                                <span>President, OUIAA</span>
+                            </div>
+                        </div>
+                        <a href="/about" class="btn btn-primary btn-large">Learn More About Us</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="./imageb/board-img/ouiaa-president.jpg" alt="#">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-------------------Testimonial--------------------------------->
+        <section class="testimonial">
+            <div class="section-header">
+                <h2>Alumni Voices  (Testimonies)</h2>
+                <p>Our greatest strength is our people—and their stories.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                <p class="testimonial-text">
+                        “Joining the alumni association helped me land my first international role. The support and mentoring I received were unmatched.”
+                    </p>
+                    
+                        <div class="alumni-info">
+                            <p class="alumni-title">— Blessing O., Class of 2015</p>
+                        </div>
+                
+                </div>
+        
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        “I’ve made lifelong friends, business partners, and even reconnected with classmates I thought I’d lost touch with forever.”
+                    </p>
+                    
+                        <div class="alumni-info">
+                            <p class="alumni-title">— Tunde A., Class of 2013</p>
+                        </div>
+                    
+                </div>
+        
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        “Volunteering with OUIAA gave me purpose again. There’s nothing like serving your own community.”
+                    </p>
+                    
+                        <div class="alumni-info">
+                            <p class="alumni-title">— Ifeoma M., Class of 2018 </p>
+                        </div>
+                    
+                </div>
+            </div>
+
+        </section>
+ 
+
+
+
+
+
+
+
+    
+        <!-- ===  Reconnect CTA == -->
+        <!---<section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Reconnect?</h2>
+                    <p>Join thousands of alumni who are already building their future together.</p>
+                    <a href="#" class="btn btn-primary btn-large">Get Started Today</a>
+                </div>
+            </div>
+        </section>-->
+    
+        <!-- Footer -->
+        <footer class="footer" style="margin-top: 20px;">
+            <div class="footer-container">
+                <div class="footer-header">
+                    <div class="footer-logo">
+                        <img src="imageb/OUIAA.png" alt="">
+                    </div>
+                    <div class="university-name">OUIAA</div>
+                  
+                </div>
+    
+                <div class="footer-content">
+                   
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/about-scholarship">Scholarship</a></li>
+                            <li><a href="/transcript">Transcript</a></li>
+                           
+                        </ul>
+                    </div>
+    
+              
+                    <div class="footer-section">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="/contact">Help Center</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                     </ul>
+                    </div>
+    
+                 
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <div class="contact-item">
+                            <span>📧</span>
+                            <span><a href="mailto:ouiaaglobal@gmail.com">ouiaaglobal@gmail.com</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <span>📞</span>
+                            <span><a href="tel:+2348065260738">+234(0)80 6526 0738</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <span>📍</span>
+                            <span>Oduduwa University Ipetumodu, P.M.B. 5533, Ile Ife, Osun State, Nigeria</span>
+                        </div>
+                      
+                    </div>
+                    <div class="social-icon">
+                        <h4 >Follow Us</h4>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/ouiaaworldwide/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/oduduwa-university-alumni-association/posts/?feedView=all" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://wa.me/2348065260738" title="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i>
+                            </a>
+             
+                        </div>
+                </div>
+         </div>
+    
+    
+                <div class="footer-bottom">
+                    <p>&copy; 2025 OUIAA. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

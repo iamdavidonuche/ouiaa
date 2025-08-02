@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment-Gateway</title>
+    <link rel="stylesheet" href="../style.css/payment.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="../imageb/OUIAA.png" alt="">
+            <h1>OUIAA</h1>
+            <p>Payment page</p>
+        </div>
+        <div class="main">
+         
+                <p class="name">
+                    Dear <%= result.firstName %> <%= result.lastName %>,
+                </p>
+                <span>
+                    Please use this page to pay <strong>
+                        <% if(!total){ %>
+                            <script>
+                                alert("Select a transcript option")
+                                window.location.href("/apply-transcript")
+                            </script>
+                        <% }else{ %>
+                            ₦<%= total %>
+                        <% } %>
+                    </strong> for : <strong>OUIAA4074 Transcript services</strong> 
+                </span>
+
+                <div class="info">
+            <p>
+               <strong>Note - </strong> When you tap on the "Pay now" button below, you will be directed to a payment page. If you opt for the Bank Transfer option, after following the instructions for bank transfer, wait on the screen for further instructions.
+               </p>
+               
+           <span>Thank you for doing business with us. </span>
+
+          </div>
+
+        </div>
+
+        <div class="btn">
+            <button class="invoice">
+                <a href="/invoice">View Invoice</a>
+            </button>
+            <button class="pay" id="payButton">
+                Pay now!
+            </button>
+        </div>
+       
+   
+    </div>
+
+    <script>
+        document.getElementById("payButton").onclick = function() {
+            alert("Payment under maintainance try again later! 🚖🚧")
+        }
+    </script>
+</body>
+</html>

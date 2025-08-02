@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: arial,sans-serif;
+    background-color: #f8f9fa;
+}
+.container{
+    margin-top: 60px;
+    padding: 80px 20px 30px;
+    max-width: 1000px;
+    line-height: 1.6;
+    border: 1px solid ;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header{
+    position: relative;
+   left: 25rem;
+   margin-bottom: 10px;
+   top: -3rem;
+  
+}
+.page-title{
+    font-size: 30px;
+    font-weight: lighter;
+}
+.user-address{
+  position: relative;
+  left: 2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+.user-name{
+    margin-bottom: 15px;
+}
+.user-name h2{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.user-name p{
+    color: #444;
+   font-size: 1.2rem;
+}
+.date{
+    display: grid;
+     line-height: 1.7rem;
+  }
+.date span{
+    font-size: 1rem;
+    font-weight: 600;
+  }
+/*.table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 25px 0px;
+ }
+thead{
+background-color: rgb(152, 147, 147);
+ }
+
+thead th{
+    color: #0a0a0ab2;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    text-align: center;
+    border: none;
+    vertical-align: middle;
+}
+.invoice-data{
+    
+    position: relative;
+    left: 6px;
+
+}
+.invoice-data td{
+    color: black;
+    font-size: 1rem;
+    
+}
+=======*/
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
+  
+  .table th, .table td {
+    border: none;
+    padding: 8px 12px;
+    text-align: center; 
+    vertical-align: middle; 
+  }
+  
+  .table th {
+    background-color: #6c6c6c;
+    color: white;
+    font-weight: bold;
+  border-left: 2px solid white;
+  }
+  
+  .table td:first-child, .table th:first-child {
+    text-align: left;
+    width: 50%; 
+  }
+.total-info{
+margin-top: 3rem;
+}
+.info-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -3rem;
+}
+.warning-box {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    padding: 1.5rem;
+     margin: 1.5rem 0 0;
+  
+  text-align: center;
+ 
+}
+
+.warning-box strong {
+    color: #721c24;
+}
+.footer{
+    background-color:  #E5DCD6;
+    padding: 10px;
+    width: 59.6%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 15px;
+   
+}
+.msg {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    padding: 10px;
+}
+.msg p{
+    color: #4a4848;
+}
+.msg span{
+    color: #040404;
+    font-weight: 600;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+      max-width: 90%;
+      padding: 60px 15px 25px;
+    }
+  
+    .header {
+      left: 20rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      max-width: 95%;
+      padding: 40px 10px 20px;
+      margin-top: 40px;
+    }
+  
+    .header {
+      position: static;
+      text-align: center;
+      margin-bottom: 20px;
+      top: 0;
+    }
+  
+    .page-title {
+      font-size: 26px;
+    }
+  
+    .user-address {
+      position: static;
+      left: 0;
+      margin-bottom: 30px;
+    }
+  
+    .user-name h2 {
+      font-size: 0.95rem;
+    }
+  
+    .user-name p {
+      font-size: 1.1rem;
+    }
+  
+    .date {
+      line-height: 1.5rem;
+    }
+  
+    .date span {
+      font-size: 0.95rem;
+    }
+  
+    .table th,
+    .table td {
+      padding: 6px 8px;
+      font-size: 0.9rem;
+    }
+  
+    .table th {
+      font-size: 0.85rem;
+    }
+  
+    .total-info {
+      margin-top: 2rem;
+    }
+  
+    .warning-box {
+      padding: 1.2rem;
+      margin: 1.2rem 0 0;
+    }
+  
+    .footer {
+      width: 70%;
+      margin-top: 12px;
+    }
+  
+    .msg {
+      font-size: 1.1rem;
+      line-height: 1.8rem;
+      padding: 8px;
+    }
+  
+    .msg p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      max-width: 98%;
+      padding: 30px 8px 15px;
+      margin-top: 30px;
+      border: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .page-title {
+      font-size: 22px;
+    }
+  
+    .user-address {
+      margin-bottom: 25px;
+    }
+  
+    .user-name h2 {
+      font-size: 0.9rem;
+    }
+  
+    .user-name p {
+      font-size: 1rem;
+    }
+  
+    .date {
+      line-height: 1.4rem;
+    }
+  
+    .date span {
+      font-size: 0.9rem;
+    }
+  
+    .table {
+      font-size: 0.8rem;
+    }
+  
+    .table th,
+    .table td {
+      padding: 5px 6px;
+      font-size: 0.8rem;
+    }
+  
+    .table th {
+      font-size: 0.75rem;
+    }
+  
+    .table td:first-child,
+    .table th:first-child {
+      width: 60%;
+    }
+  
+    .total-info {
+      margin-top: 1.5rem;
+    }
+  
+    .warning-box {
+      padding: 1rem;
+      margin: 1rem 0 0;
+      font-size: 0.9rem;
+    }
+  
+    .footer {
+      width: 85%;
+    }
+  
+    .msg {
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
+  
+    .msg p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .container {
+      padding: 25px 5px 12px;
+    }
+  
+    .page-title {
+      font-size: 20px;
+    }
+  
+    .table {
+      font-size: 0.75rem;
+    }
+  
+    .table th,
+    .table td {
+      padding: 4px 5px;
+      font-size: 0.75rem;
+    }
+  
+    .table th {
+      font-size: 0.7rem;
+    }
+  
+    .warning-box {
+      padding: 0.8rem;
+      font-size: 0.85rem;
+    }
+  
+    .footer {
+      width: 90%;
+    }
+  
+    .msg {
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+    }
+  }
+  

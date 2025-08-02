@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invoice</title>
+    <link rel="stylesheet" href="../style.css/invoice.css">
+</head>
+<body>
+    <div class="main">
+        <div class="info-box"> 
+            <div class="warning-box">
+            <span><strong>NB:</strong> Please Kindly take a Screenshot</span>
+        </div>
+    </div>
+       
+            
+    <div class="container">
+        
+        <div class="header">
+            <h1 class="page-title"> 
+                INVOICE
+            </h1>
+        </div>
+        
+            <div class="user-address">
+                <div class="user-name">
+                    <h2>Billed to:</h2>
+                    <p><%= invoiceResult.lastName %> <%= invoiceResult.firstName %></p>
+                    <span><%= invoiceResult.country %></span>
+                </div>
+               
+               <div class="date">
+                <span>Created: <%= date %></span>
+                <span>Due date: <%= date %></span>
+                <span>Invoice total: ₦<%= total %></span>
+                <span>Balance due: ₦<%= total %></span>
+               </div>
+            
+</div>
+<div class="invoice-table">
+    <table class="table">
+<thead>
+    <th>
+Description
+    </th>
+    <th>
+        Quantity
+    </th>
+    <th>
+        Amount
+    </th>
+    <th>Total</th>
+</thead>
+<tbody class="invoice-data" >
+
+<% for(let name of names){ %>
+    <tr>
+        <td><%= name.name %></td>
+        <td>1</td>
+        <td><% name.price %></td>
+        <td><%= name.price %></td>
+    </tr>
+<% } %>
+</tbody>
+</table>
+<div class="total-info">
+    <p> Invoice Total (NGN): ₦<%= total %></p>
+    <p> Balance due (NGN): ₦<%= total %></p>
+ </div>
+</div>
+
+    </div>
+</div>
+<footer >
+    <div class="footer">
+    <div class="msg">
+        <p>Thank you</p>
+        <span>OUIAA</span>
+    </div>
+</div>
+</footer>
+</body>
+</html>

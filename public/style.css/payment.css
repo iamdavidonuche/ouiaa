@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+.container {
+    width:90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px ;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(193, 132, 132, 0.586);
+}
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+.logo img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.logo h1 {
+    font-size: 3rem;
+    color: #222;
+}
+
+.logo p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #444;
+}
+
+.main {
+    margin-top: 20px;
+}
+
+.name {
+    font-size: 17px;
+    color: black;
+    padding: 20px 0 10px 0;
+}
+
+span {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.info {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.8rem;
+}
+
+.info p {
+    color: #444;
+}
+
+.info span {
+    color: #666;
+    font-style: italic;
+    padding-top: 15px !important; 
+}
+
+
+ .btn {
+    margin-top: 30px;
+}
+
+.btn button {
+    padding: 12px 20px;
+    font-size: 16px;
+     color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn button a{
+    color: white;
+    text-decoration: none;
+}
+.pay {
+    background-color: red;
+    border-radius: 30px;
+}
+.invoice{
+    background-color: #777;
+    border-radius: 20px;
+}
+.pay:hover {
+    background-color: #0C3;
+}
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 768px) {
+    .logo h1 {
+      font-size: 2rem;
+    }
+  
+    .logo p {
+      font-size: 1rem;
+    }
+  
+    .name {
+      font-size: 16px;
+    }
+  
+    .main span,
+    .info p {
+      font-size: 15px;
+    }
+  
+    .btn {
+      flex-direction: column;
+    }
+  
+    .btn button {
+      width: 100%;
+      margin-bottom: 4%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 20px;
+    }
+  
+    .logo h1 {
+      font-size: 1.8rem;
+    }
+  
+    .logo p {
+      font-size: 0.95rem;
+    }
+  
+    .name {
+      font-size: 15px;
+    }
+  
+    .main span,
+    .info p {
+      font-size: 14px;
+    }
+  }
