@@ -1,12 +1,21 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from 'express';
+import session from 'express-session';
 import bodyParser from 'body-parser';
 
 const app = express();
-const port = 3000; // process.env.PORT || 
+const port = process.env.PORT || 3000;
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use(session({
+    secret: 'your-secret',
+    resave: false,
+    saveUninitialized: true
+}));
+app.set('view engine', 'ejs');
 
 const date = new Date()
 
@@ -51,48 +60,61 @@ app.get("/apply-transcript", (req, res) =>{res.render("apply-transcript.ejs")});
 
 app.get("/leadership", (req, res) => {res.render("leadership.ejs")})
 
-let userInfo = [];
+app.post("/apply-transcript", (req, res) => {
+  const result = req.body;
+  
+  const academicRef = parseInt(result.academicRef) || 0;
+  const englishProf = parseInt(result.englishProf) || 0;
 
-let result;
-let total = 0;
-let selectedDocument = []
+  let total = 0;
+  let selectedDocument = [];
 
-app.post("/apply-transcript", (req, res) =>{
-    result = req.body;
-    userInfo.push(result)
+  if (academicRef) {
+    total += academicRef;
+    selectedDocument.push({ name: "Academic Reference Transcript", price: academicRef });
+  }
+  if (englishProf) {
+    total += englishProf;
+    selectedDocument.push({ name: "English Proficiency Transcript", price: englishProf });
+  }
 
-    let academicRef = parseInt(result.academicRef);
-    let englishProf = parseInt( result.englishProf);
-    
+  // ⭐ SAVE in real session object
+  req.session.result = result;
+  req.session.total = total;
+  req.session.selectedDocument = selectedDocument;
 
-    if (academicRef) {
-        total += academicRef;
-        selectedDocument.push({ name: "Academic Reference Transcript", price: academicRef });
-    }
-    if (englishProf) {
-        total += englishProf;
-        selectedDocument.push({ name: "English Proficiency Transcript", price: englishProf });
-    }
-    res.render("payment.ejs", {result: userInfo[0], total})
-    
+  res.render("payment.ejs", { result, total });
 });
 
+app.get("/invoice", (req, res) => {
+  if (!req.session.result) {
+    return res.send("No invoice data found. Apply first.");
+  }
 
-app.get("/invoice", (req, res) =>{
-    let invoiceResult = result;
-    res.render("invoice.ejs", {invoiceResult: invoiceResult, names: selectedDocument, total: total, date: formatCustomDate(date)});
-    selectedDocument = []
+  const { result, total, selectedDocument } = req.session;
+
+  res.render("invoice.ejs", {
+    invoiceResult: result,
+    names: selectedDocument,
+    total,
+    date: formatCustomDate(date),
+  });
 });
+
 
 app.get('/payment', (req, res) => {
     res.render('payment.ejs', {result: data});
 });
 
-app.get("/about", (req, res) =>{res.render("about.ejs")});
+app.get("/about", (req, res) =>{
+    res.render("about.ejs")
+});
 
 
-app.get("/transcript", (req, res) =>{res.render("transcript.ejs");});
+app.get("/transcript", (req, res) =>{
+    res.render("transcript.ejs");
+});
 
-app.listen(3000, () =>{
-    console.log(`Server is running on port ${3000}`)
+app.listen(port, () =>{
+    console.log(`Server is running on port ${port}`)
 })
