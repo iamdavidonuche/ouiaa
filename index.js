@@ -1,16 +1,12 @@
-import dotenv from 'dotenv';
-dotenv.config();
 import express from 'express';
-import axios from 'axios';
 import bodyParser from 'body-parser';
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000; // process.env.PORT || 
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
-app.set('view engine', 'ejs');
 
 const date = new Date()
 
@@ -92,15 +88,11 @@ app.get('/payment', (req, res) => {
     res.render('payment.ejs', {result: data});
 });
 
-app.get("/about", (req, res) =>{
-    res.render("about.ejs")
-});
+app.get("/about", (req, res) =>{res.render("about.ejs")});
 
 
-app.get("/transcript", (req, res) =>{
-    res.render("transcript.ejs");
-});
+app.get("/transcript", (req, res) =>{res.render("transcript.ejs");});
 
-app.listen(port, () =>{
-    console.log(`Server is running on port ${port}`)
+app.listen(3000, () =>{
+    console.log(`Server is running on port ${3000}`)
 })
