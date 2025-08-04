@@ -46,6 +46,12 @@
   gap: 3rem;
   margin-top: 3rem;
   }
+  .lead-head {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+    }
   
   .card {
       background: white;
@@ -118,6 +124,12 @@
     flex-wrap: wrap;
     gap: 20px;
   }
+  .lead-head {
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 
   .leadership-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -144,6 +156,11 @@
     padding: 0 20px 20px;
   }
   .leadership-top {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .lead-head {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
@@ -176,7 +193,7 @@
   
 }
 
-@media (max-width: 360px) {
+@media (min-width: 359px) and (max-width: 360px) {
  
 
   .container h2,
@@ -193,6 +210,9 @@
   }
 
   .leadership-top {
+    width: 79.9%;
+  }
+  .lead-head {
     width: 79.9%;
   }
 

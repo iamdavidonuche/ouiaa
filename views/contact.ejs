@@ -70,7 +70,7 @@
       <section class="contact-form-section">
         <div class="contact-container">
           <div class="contact-form-wrapper">
-            <form class="contact-form">
+            <form class="contact-form" id="contactForm">
               <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required />
@@ -120,6 +120,26 @@
         <p>&copy; 2025 OUIAA. All rights reserved.</p>
       </footer>
     </div>
+
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function(){
+        emailjs.init("oxlfANpTFLWJmVJ_C"); // Replace with your EmailJS public key
+      })();
+    </script>
+
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        emailjs.sendForm("service_dzqevhu", "template_r50hd0a", this)
+          .then(() => {
+            alert("Message sent successfully!");
+          }, (error) => {
+            alert("Failed to send message: " + JSON.stringify(error));
+          });
+      });
+    </script>
 
     <script>
           function toggleMobileMenu() {
