@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
    <link rel="stylesheet" href="/style.css/scholarship.css">
    <link rel="stylesheet" href="/style.css/nav.css">
-   <script src="/script.js/script.js"></script>
+   <script src="/public/script.js/script.js"></script>
 </head>
 <body>
 
@@ -40,7 +40,7 @@
                             <a href="/imageb/OUIAA Scholarship Information Pack.pdf" download>Additional Information<i class="fa-solid fa-download"></i></a>
                         </div>
                         <div class="click-me">
-                         <a href="https://forms.gle/m43vAruaprgzsnA8A " target="_blank" class="btn">Apply</a>
+                         <a href="#" class="btn" id="off">Apply</a>
                         </div>
                 </div>
             </div>
@@ -54,5 +54,12 @@
         </div>
     </div>
     </footer>
+
+    <script>
+        const button = document.querySelector("#off")
+        button.addEventListener("click", ()=>{
+            alert("Scholarship programme has ended")
+        })
+    </script>
 </body>
 </html>
